@@ -19,12 +19,12 @@ public class RationalNumber extends RealNumber{
 
     }
 
-    public double getNum() {
+    public double getNumerator() {
         return numerator;
 
     }
 
-    public double getDen() {
+    public double getDenominator() {
         return denominator;
 
     }
