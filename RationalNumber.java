@@ -60,6 +60,8 @@ public class RationalNumber extends RealNumber{
         denominator /= gcd(numerator,denominator);
     }
 
-    
+    public RationalNumber multiply(RationalNumber other){
+        return new RationalNumber(numerator*other.getNumerator(),denominator*other.getDenominator());
+    }
 
 }
