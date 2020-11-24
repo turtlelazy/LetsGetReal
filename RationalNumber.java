@@ -19,12 +19,12 @@ public class RationalNumber extends RealNumber{
 
     }
 
-    public double getNumerator() {
+    public int getNumerator() {
         return numerator;
 
     }
 
-    public double getDenominator() {
+    public int getDenominator() {
         return denominator;
 
     }
@@ -33,6 +33,11 @@ public class RationalNumber extends RealNumber{
         return new RationalNumber(denominator, numerator);
     }
 
+    public boolean equals(RationalNumber other){
+        return(numerator == other.numerator && denominator == other.denominator);
+    }
 
-
+    public String toString() {
+        return (numerator + "/" + denominator);
+    }
 }

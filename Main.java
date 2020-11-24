@@ -19,5 +19,26 @@ public class Main {
         System.out.println(" Should print 1.5");
         System.out.println(z.reciprocal().getNumerator() + "/" + z.reciprocal().getDenominator());
 
+        System.out.print(z.equals(z.reciprocal()));
+        System.out.println(" Should print false");
+
+        System.out.print(z.equals(x));
+        System.out.println(" Should print false");
+
+        System.out.print(y.equals(x));
+        System.out.println(" Should print true");
+
+        System.out.print(x.toString());
+        System.out.println(" Should print 0/1");
+
+        System.out.print(y.toString());
+        System.out.println(" Should print 0/1");
+
+        System.out.print(z.toString());
+        System.out.println(" Should print 2/3");
+
+        System.out.print(z.reciprocal().toString());
+        System.out.println(" Should print 3/2");
+
     }
 }
