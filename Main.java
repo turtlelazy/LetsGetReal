@@ -39,6 +39,17 @@ public class Main {
 
         System.out.print(z.reciprocal().toString());
         System.out.println(" Should print 3/2");
+        
+        /*
+        //gcd test cases; must set method to public instead of private to work
+        System.out.println(z.gcd(10,2));
+        System.out.println(z.gcd(210,45));
+        System.out.println(z.gcd(45,210));
+        System.out.println(z.gcd(2, 10));
+        System.out.println(z.gcd(210, 210));
+        System.out.println(z.gcd(0, 45));
+        System.out.println(z.gcd(45,0)); //will fail if not accounting for 0 divisor case
+        */
 
     }
 }

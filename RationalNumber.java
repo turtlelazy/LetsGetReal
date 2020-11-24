@@ -40,4 +40,19 @@ public class RationalNumber extends RealNumber{
     public String toString() {
         return (numerator + "/" + denominator);
     }
+
+    private static int gcd (int a, int b){
+        if(b == 0){
+            return a;
+        }
+        else if ((a % b) == 0){
+            return b;
+        }
+
+        else{
+            return gcd(b,a%b);
+        }
+
+    }
+
 }
