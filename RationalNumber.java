@@ -55,4 +55,11 @@ public class RationalNumber extends RealNumber{
 
     }
 
+    private void reduce(){
+        numerator /= gcd(numerator,denominator);
+        denominator /= gcd(numerator,denominator);
+    }
+
+    
+
 }
