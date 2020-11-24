@@ -6,7 +6,7 @@ public class RationalNumber extends RealNumber{
         numerator = nume;
         if(deno == 0){
             numerator = 0;
-            denominator = 0;
+            denominator = 1;
         }
         else{
             denominator = deno;
@@ -15,9 +15,19 @@ public class RationalNumber extends RealNumber{
 
     @Override
     public double getValue(){
-        return numerator/denominator;
+        return (double)numerator/denominator;
 
     }
 
-    
+    public double getNum() {
+        return numerator;
+
+    }
+
+    public double getDen() {
+        return denominator;
+
+    }
+
+
 }
