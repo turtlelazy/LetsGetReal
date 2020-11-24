@@ -21,7 +21,7 @@ public class RationalNumber extends RealNumber{
 
     @Override
     public double getValue(){
-        return (double)numerator/denominator;
+        return (double)getNumerator()/getDenominator();
 
     }
 
@@ -36,15 +36,15 @@ public class RationalNumber extends RealNumber{
     }
     
     public RationalNumber reciprocal(){
-        return new RationalNumber(denominator, numerator);
+        return new RationalNumber(getDenominator(), getNumerator());
     }
 
     public boolean equals(RationalNumber other){
-        return(numerator == other.numerator && denominator == other.denominator);
+        return(getNumerator() == other.getNumerator() && getDenominator() == other.getDenominator());
     }
 
     public String toString() {
-        return (numerator + "/" + denominator);
+        return (getNumerator() + "/" + getDenominator());
     }
 
     private static int gcd (int a, int b){
@@ -66,13 +66,13 @@ public class RationalNumber extends RealNumber{
     }
 
     private void reduce(){
-        int GCF = gcd(numerator,denominator);
+        int GCF = gcd(getNumerator(),getDenominator());
         numerator /= GCF;
         denominator /= GCF;
     }
 
     public RationalNumber multiply(RationalNumber other){
-        return new RationalNumber(numerator*other.getNumerator(),denominator*other.getDenominator());
+        return new RationalNumber(getNumerator()*other.getNumerator(),getDenominator()*other.getDenominator());
     }
 
     public RationalNumber divide(RationalNumber other){
@@ -81,13 +81,13 @@ public class RationalNumber extends RealNumber{
     }
 
     public RationalNumber add(RationalNumber other){
-        return new RationalNumber(numerator * other.denominator + other.numerator * denominator, 
-                denominator * other.denominator);
+        return new RationalNumber(getNumerator() * other.getDenominator() + other.getNumerator() * getDenominator(), 
+                getDenominator() * other.getDenominator());
     }
     
     public RationalNumber subtract(RationalNumber other) {
-        return new RationalNumber(numerator * other.denominator - other.numerator * denominator,
-                denominator * other.denominator);
+        return new RationalNumber(getNumerator() * other.getDenominator() - other.getNumerator() * getDenominator(),
+                getDenominator() * other.getDenominator());
     }
 
 }
