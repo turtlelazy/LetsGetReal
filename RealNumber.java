@@ -30,7 +30,7 @@ public class RealNumber{
     }
 
     public boolean equals(RealNumber other){
-        if(getValue() == 0.0 || other.getValue() == 0){
+        if(getValue() == 0.0 || other.getValue() == 0.0){
             return getValue() == other.getValue();
         }
         else{
