@@ -8,6 +8,17 @@ public abstract class Number {
             return (getValue() - other.getValue()) * (getValue() - other.getValue()) < 0.000001;
         }
     }
+    
+    public int compareTo(Number other) {
+        if (equals(other)) {
+            return 0;
+        } else if (getValue() - other.getValue() > 0) {
+            return 1;
+        } else {
+            return -1;
+        }
+
+    }
 
     
 
