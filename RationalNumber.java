@@ -44,6 +44,13 @@ public class RationalNumber extends RealNumber{
     }
 
     public String toString() {
+        if(getNumerator() == 0){
+            return "0";
+        }
+        else if(getDenominator() == 1){
+            return(getNumerator() + "");
+        }
+        
         return (getNumerator() + "/" + getDenominator());
     }
 
